@@ -5,10 +5,10 @@ services:
     ports:
       - "8000:8000" # встроенный сервер Laravel
     volumes:
-      - .:/var/www/html
-    working_dir: /var/www/html
+      - .:/var/www/fileshare
+    working_dir: /var/www/fileshare
     command: php artisan serve --host=0.0.0.0 --port=8000
     environment:
       - APP_ENV=local
       - DB_CONNECTION=sqlite
-      - DB_DATABASE=/var/www/html/database/database.sqlite
+      - DB_DATABASE=/var/www/fileshare/database/database.sqlite

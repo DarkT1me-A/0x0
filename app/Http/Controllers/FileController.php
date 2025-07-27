@@ -15,20 +15,20 @@ class FileController extends Controller
 Minimalistic file upload service (like 0x0.st).
 
 Upload:
-  curl -F"file=@filename" https://yourdomain.com -v
+  curl -F"file=@filename" https://45.10.42.175 -v
 
 Response example headers:
   HTTP/1.1 200 OK
-  X-Delete: https://yourdomain.com/delete/DELETE_HASH
+  X-Delete: https://45.10.42.175/delete/DELETE_HASH
 
 Response body:
-  https://yourdomain.com/file/HASH
+  https://45.10.42.175/file/HASH
 
 Download:
-  curl https://yourdomain.com/file/HASH
+  curl https://45.10.42.175/file/HASH
 
 Delete:
-  curl https://yourdomain.com/delete/DELETE_HASH
+  curl https://45.10.42.175/delete/DELETE_HASH
 EOT;
 
         return response($content, 200)->header('Content-Type', 'text/plain');
