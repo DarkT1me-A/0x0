@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Console\Commands;
+namespace app\Console\Commands;
 
-use App\Models\File;
+use app\Models\File;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
 
