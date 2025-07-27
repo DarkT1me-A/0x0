@@ -63,10 +63,10 @@ curl http://localhost:8000/delete/xyz456
 Есть команда Artisan, которая удаляет все файлы, время жизни которых истекло:
 php artisan files:cleanup
 Чтобы запускать её автоматически, добавьте в планировщик задач в `app/Console/Kernel.php`:
-# protected function schedule(\Illuminate\Console\Scheduling\Schedule $schedule)
-# {
-# $schedule->command('files:cleanup')->everyFiveMinutes();
-# }
+protected function schedule(\Illuminate\Console\Scheduling\Schedule $schedule)
+{
+$schedule->command('files:cleanup')->everyFiveMinutes();
+}
 И запустите планировщик:
 php artisan schedule:work
 
