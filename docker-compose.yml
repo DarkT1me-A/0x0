@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  app:
+    image: laravelphp/php-fpm:8.3
+    ports:
+      - "8000:8000" # встроенный сервер Laravel
+    volumes:
+      - .:/var/www/html
+    working_dir: /var/www/html
+    command: php artisan serve --host=0.0.0.0 --port=8000
+    environment:
+      - APP_ENV=local
+      - DB_CONNECTION=sqlite
+      - DB_DATABASE=/var/www/html/database/database.sqlite
